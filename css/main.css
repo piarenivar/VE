@@ -46,12 +46,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background-color: white;
+    background-color: #000;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: rgb(0, 0, 0, .4);
-    border: .175rem solid white;
+    background-color: rgb(69, 69, 69);
+    border: .175rem solid #000;
     border-radius: 100rem;
 }
 
@@ -62,6 +62,42 @@ body {
     font-family: 'Montserrat', sans-serif;
     overflow-x: hidden;
     scroll-behavior: smooth;
+}
+
+.intro {
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 1.25s ease;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-logo {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+    transition-delay: .5s;
+}
+
+.intro-logo-active {
+    opacity: 1;
+}
+
+.intro-logo img {
+    width: 12rem;
+    margin-top: 1rem;
+    filter: invert(100%);
 }
 
 .cust-btn {
@@ -645,6 +681,7 @@ a:hover {
 
 .project img {
     width: 28rem;
+    min-height: 24rem;
     filter: brightness(.8);
     transition: all .5s ease-in-out;
 }
@@ -679,8 +716,8 @@ a:hover {
 }
 
 .all-projects {
-    width: 20rem;
-    height: 20rem;
+    width: 24rem;
+    height: 24rem;
     margin-left: 1rem;
     margin-right: 1rem;
     display: flex;
@@ -745,7 +782,7 @@ a:hover {
 
 @media screen and (max-width: 576px) {
     #projects {
-        margin-bottom: 4rem;
+        margin-bottom: 2rem;
     }
 
     #projects .container h1 {
@@ -759,6 +796,10 @@ a:hover {
     }
 
     .project img {
+        width: 90vw;
+    }
+
+    .all-projects {
         width: 90vw;
     }
 }
@@ -902,8 +943,8 @@ a:hover {
 }
 
 @media screen and (max-width: 872px) {
-    .contact-info {
-
+    #contact {
+        margin-bottom: 4rem;
     }
 
     .contact-info h1 {
@@ -1064,6 +1105,10 @@ a:hover {
 }
 
 @media screen and (max-width: 576px) {
+    .cta {
+        margin-top: 4rem;
+    }
+
     .contact-info h1 {
         font-size: 1.5rem;
     }
@@ -1079,6 +1124,22 @@ a:hover {
 
     .cta form {
         width: 100%;
+    }
+
+    .cta input {
+        width: 48%;
+        height: 2rem;
+        border: none;
+        border-bottom: .1rem solid #000;
+        margin: 1.5rem 0;
+    }
+
+    .cta .message {
+        width: 100%;
+        margin-top: 1.5rem;
+        border: none;
+        border-bottom: .1rem solid #000;
+        resize: none;
     }
 }
 
