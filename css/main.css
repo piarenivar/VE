@@ -1,3 +1,5 @@
+/* index.html - start */
+
 * {
     margin: 0;
     padding: 0;
@@ -71,7 +73,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    transition: all 1.25s ease;
+    transition: all .7s ease-in-out;
     background-color: #000;
     display: flex;
     justify-content: center;
@@ -87,7 +89,7 @@ body {
     align-items: center;
     opacity: 0;
     transition: all 1s ease-in-out;
-    transition-delay: .5s;
+    transition-delay: .25s;
 }
 
 .intro-logo-active {
@@ -381,7 +383,7 @@ a:hover {
     justify-content: flex-end;
     align-items: flex-end;
     background-color: #000;
-    background-image: url(../images/main.png);
+    background-image: url(../images/project17.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -455,7 +457,6 @@ a:hover {
     width: 100%;
     min-height: max-content;
     margin-top: 50rem;
-    margin-bottom: 8rem;
 }
 
 #about .container {
@@ -507,7 +508,7 @@ a:hover {
     justify-content: flex-end;
     align-items: flex-end;
     background-color: #000;
-    background-image: url(../images/about-us.png);
+    background-image: url(../images/project16.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -548,7 +549,6 @@ a:hover {
 
     #about {
         margin-top: 44rem;
-        margin-bottom: 6rem;
     }
 
     #about .container {
@@ -574,7 +574,6 @@ a:hover {
 @media screen and (max-width: 992px) {
     #about {
         margin-top: 42rem;
-        margin-bottom: 5rem;
     }
 
     .about-text h1 {
@@ -597,7 +596,6 @@ a:hover {
 @media screen and (max-width: 576px) {
     #about {
         margin-top: 41rem;
-        margin-bottom: 3rem;
     }
 
     .about-text {
@@ -624,7 +622,7 @@ a:hover {
 #projects {
     width: 100%;
     min-height: max-content;
-    margin-bottom: 8rem;
+    padding-top: 8rem;
 }
 
 #projects .container {
@@ -667,6 +665,7 @@ a:hover {
 
 .project {
     width: fit-content;
+    max-width: 28rem;
     min-height: max-content;
     margin: 0 1rem;
     display: flex;
@@ -756,13 +755,13 @@ a:hover {
 
 @media (max-width: 1200px) {
     #projects {
-        margin-bottom: 6rem;
+        padding-top: 6rem;
     }
 }
 
 @media screen and (max-width: 992px) {
     #projects {
-        margin-bottom: 5rem;
+        padding-top: 5rem;
     }
 
     #projects .container h1 {
@@ -782,7 +781,7 @@ a:hover {
 
 @media screen and (max-width: 576px) {
     #projects {
-        margin-bottom: 2rem;
+        padding-top: 3rem;
     }
 
     #projects .container h1 {
@@ -807,6 +806,7 @@ a:hover {
 #contact {
     width: 100%;
     min-height: max-content;
+    padding-top: 8rem;
     margin-bottom: 6rem;
 }
 
@@ -889,22 +889,87 @@ a:hover {
     height: 24rem;
     display: flex;
     overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 .contact-services::-webkit-scrollbar {
     display: none;
-  }
+}
 
 .service {
     min-width: 16rem;
     height: 100%;
-    background-color: rgb(0, 0, 0, .1);
+    position: relative;
+    background-color: #000;
     margin: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service::before {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* opacity: .8; */
+}
+
+.service-1::before {
+    background-image: url(../images/service-1.png);
+}
+.service-2::before {
+    background-image: url(../images/service-2.png);
+}
+.service-3::before {
+    background-image: url(../images/service-3.png);
+}
+.service-4::before {
+    background-image: url(../images/service-4.png);
+}
+
+.service div {
+    width: 90%;
+    height: 94%;
+    position: relative;
+    padding: 1rem;
+    color: white;
+    background-color: rgb(0, 0, 0, .7);
+}
+
+.service div h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.service div a {
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    padding: .3rem .5rem;
+}
+
+.service div a:hover {
+    background-color: rgb(255, 255, 255, .5);
 }
 
 @media screen and (max-width: 1295px) {
     .contact-services {
         width: 48%;
+    }
+}
+
+@media scree and (max-width: 1200px) {
+    #contact {
+        padding-top: 6rem;
     }
 }
 
@@ -921,6 +986,10 @@ a:hover {
 }
 
 @media screen and (max-width: 992px) {
+    #contact {
+        padding-top: 5rem;
+    }
+
     .contact-info a,
     .contact-socials {
         margin-left: 4rem;
@@ -973,6 +1042,10 @@ a:hover {
 }
 
 @media screen and (max-width: 576px) {
+    #contact {
+        padding-top: 3rem;
+    }
+
     .contact-info a,
     .contact-socials {
         margin-left: 1rem;
@@ -994,7 +1067,7 @@ a:hover {
 .cta {
     width: 100%;
     height: fit-content;
-    margin-top: 6rem;
+    padding-top: 6rem;
 }
 
 .cta h2 {
@@ -1092,6 +1165,7 @@ a:hover {
 }
 
 @media screen and (max-width: 992px) {
+
     .contact-info h1,
     .cta h2 {
         font-size: 1.75rem;
@@ -1106,7 +1180,7 @@ a:hover {
 
 @media screen and (max-width: 576px) {
     .cta {
-        margin-top: 4rem;
+        padding-top: 4rem;
     }
 
     .contact-info h1 {
@@ -1302,3 +1376,85 @@ a:hover {
         padding: 0;
     }
 }
+
+/* index.html - end */
+
+
+
+
+
+/* proyectos.html - start */
+
+.projects-container h1 a {
+    margin-right: 1rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0, .64)
+}
+
+.projects-container h1 a:hover {
+    margin-right: 1rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0)
+}
+
+.projects-container {
+    margin-bottom: 8rem;
+}
+
+.projects-container .projects {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.projects-container .project {
+    margin: 1rem;
+}
+
+.projects-container .projects img {
+    object-fit: cover;
+}
+
+@media screen and (max-width: 992px) {
+    .projects-container {
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .projects-container {
+        margin-bottom: 3rem;
+    }
+
+    .projects-container .projects {
+        padding: 0;
+    }
+}
+
+/* proyectos.html - end */
+
+
+
+
+
+/* servicios.html - start */
+
+/* servicios.html - end */
+
+
+
+
+
+/* nosotros.html - start */
+
+/* nosotros.html - end */
+
+
+
+
+
+/* contacto.html - start */
+
+/* contacto.html - end */
+

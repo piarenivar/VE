@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         intro.style.transform = 'translateY(-100%)';
-    }, 2800)
+    }, 3000)
 });
 
 const navSlide = () => {
